@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Parth | Digital Marketing Executive</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Parth</h1>
+        <p>Digital Marketing Executive</p>
+    </header>
+
+    <section>
+        <h2>About Me</h2>
+        <p>I specialize in Lead Generation, Meta Ads, Google Ads and SEO.</p>
+    </section>
+
+    <section>
+        <h2>Skills</h2>
+        <ul>
+            <li>Meta Ads</li>
+            <li>Google Ads</li>
+            <li>SEO</li>
+            <li>Social Media Marketing</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Contact</h2>
+        <p>Email: yourmail@gmail.com</p>
+    </section>
+
+</body>
+</html>
