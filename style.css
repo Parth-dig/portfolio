@@ -1,35 +1,99 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Parth | Digital Marketing Executive</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <header>
-        <h1>Parth</h1>
-        <p>Digital Marketing Executive</p>
-    </header>
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
 
-    <section>
-        <h2>About Me</h2>
-        <p>I specialize in Lead Generation, Meta Ads, Google Ads and SEO.</p>
-    </section>
+/* Main Container */
+.container {
+    text-align: center;
+}
 
-    <section>
-        <h2>Skills</h2>
-        <ul>
-            <li>Meta Ads</li>
-            <li>Google Ads</li>
-            <li>SEO</li>
-            <li>Social Media Marketing</li>
-        </ul>
-    </section>
+/* Glass Card */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    width: 380px;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(0, 255, 213, 0.3);
+    transition: 0.3s ease;
+}
 
-    <section>
-        <h2>Contact</h2>
-        <p>Email: yourmail@gmail.com</p>
-    </section>
+.card:hover {
+    transform: translateY(-5px);
+}
 
-</body>
-</html>
+/* Logo */
+.logo {
+    width: 120px;
+    margin-bottom: 15px;
+}
+
+/* Name */
+h1 {
+    margin: 10px 0;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+/* Typing Text */
+.typing {
+    font-size: 18px;
+    color: #00ffd5;
+    margin-top: 8px;
+    height: 25px;
+    font-weight: 500;
+}
+
+/* Institute Text */
+.institute {
+    font-size: 14px;
+    margin-top: 10px;
+    opacity: 0.8;
+}
+
+/* Skills */
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 8px 0;
+    font-size: 15px;
+}
+
+/* Button */
+.btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 22px;
+    background: #00ffd5;
+    color: black;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.btn:hover {
+    background: white;
+    color: #0f2027;
+    box-shadow: 0 0 15px #00ffd5;
+}
