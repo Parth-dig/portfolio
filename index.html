@@ -1,159 +1,321 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Parth | Digital Marketing Executive</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parth Sharma Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<style>
 
-        body {
-            font-family: Arial, sans-serif;
-            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            color: white;
-        }
+/* ===== THEME ===== */
+:root {
+  --bg: #f4f6f9;
+  --card: #ffffff;
+  --text: #111;
+  --primary: #0d6efd;
+  --section: #0d6efd;
+}
 
-        .card {
-            background: rgba(255, 255, 255, 0.1);
-            padding: 40px;
-            border-radius: 15px;
-            width: 380px;
-            backdrop-filter: blur(15px);
-            box-shadow: 0 0 25px rgba(0, 255, 213, 0.3);
-            text-align: center;
-        }
+body.dark {
+  --bg: #0f172a;
+  --card: #1e293b;
+  --text: #f1f5f9;
+  --primary: #38bdf8;
+  --section: #334155;
+}
 
-        .logo {
-            width: 120px;
-            margin-bottom: 15px;
-        }
+/* ===== BODY ===== */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  transition: 0.3s;
+}
 
-        h1 {
-            font-size: 32px;
-            margin-bottom: 5px;
-        }
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 900px;
+  margin: 30px auto;
+  background: var(--card);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
 
-        .typing {
-            font-size: 18px;
-            color: #00ffd5;
-            height: 25px;
-            margin-bottom: 10px;
-        }
+/* ===== HEADER ===== */
+header {
+  text-align: center;
+}
 
-        .institute {
-            font-size: 14px;
-            opacity: 0.8;
-            margin-bottom: 15px;
-        }
+h1 {
+  margin: 0;
+  color: var(--primary);
+}
 
-        h2 {
-            margin: 15px 0 8px;
-        }
+/* ===== SECTION ===== */
+.section {
+  margin-top: 25px;
+}
 
-        ul {
-            list-style: none;
-        }
+.section h2 {
+  background: var(--section);
+  color: white;
+  padding: 10px;
+  border-radius: 6px;
+}
 
-        ul li {
-            margin: 6px 0;
-        }
+/* ===== LINKS ===== */
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
 
-        .btn {
-            display: inline-block;
-            margin-top: 15px;
-            padding: 10px 22px;
-            background: #00ffd5;
-            color: black;
-            text-decoration: none;
-            border-radius: 25px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
+/* ===== SKILLS ===== */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-        .btn:hover {
-            background: white;
-            box-shadow: 0 0 15px #00ffd5;
-        }
-    </style>
+.skill-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(0,0,0,0.05);
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: 0.3s;
+  text-decoration: none;
+  color: inherit;
+}
+
+body.dark .skill-box {
+  background: rgba(255,255,255,0.08);
+}
+
+.skill-box:hover {
+  transform: scale(1.05);
+}
+
+.skill-box img {
+  width: 22px;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  padding: 15px;
+  background: var(--section);
+  color: white;
+  border-radius: 10px;
+}
+
+.footer-icons a img {
+  width: 22px;
+  margin: 0 10px;
+  transition: 0.3s;
+}
+
+.footer-icons a img:hover {
+  transform: scale(1.2);
+}
+
+/* ===== BUTTONS ===== */
+#topBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  display: none;
+}
+
+#themeBtn {
+  position: fixed;
+  bottom: 70px;
+  right: 20px;
+  background: #333;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-    <div class="card">
-        <!-- Logo file same folder me hona chahiye -->
-        <img src="cbits-logo.png" alt="CBITS Logo" class="logo">
+<div class="container">
 
-        <h1>Parth</h1>
+<!-- HEADER -->
+<header>
+  <h1>Parth Sharma</h1>
+  <p>Digital Marketing Learner | SEO Specialist</p>
+  <p>📍 Bilaspur, Himachal Pradesh</p>
+</header>
 
-        <p class="typing">
-            <span id="typing-text"></span>
-        </p>
+<!-- CAREER -->
+<div class="section">
+<h2>Career Objective</h2>
+<p>
+To build a strong career in Digital Marketing by mastering SEO, WordPress, content creation, social media marketing, and paid advertising.
+</p>
+</div>
 
-        <p class="institute">
-            Digital Marketing Executive <br>
-            CBITS Institute, Sector 34A, Chandigarh
-        </p>
+<!-- EDUCATION -->
+<div class="section">
+<h2>Education</h2>
 
-        <h2>Core Skills</h2>
-        <ul>
-            <li>Lead Generation</li>
-            <li>Meta Ads</li>
-            <li>Google Ads</li>
-            <li>SEO Optimization</li>
-        </ul>
+<p><b>Digital Marketing Course</b></p>
 
-        <a href="#" class="btn">Contact Me</a>
-    </div>
+<p>
+<a href="https://cbitss.in" target="_blank">
+<img src="https://rest.techbehemoths.com/storage/images/companies/27278/e26b20ed9ee6e3b8d5afe01fd733ede9.png"
+width="120"
+style="border-radius:8px; margin-bottom:10px;">
+<br>
+CBitss Institute, Chandigarh
+</a>
+</p>
 
-    <script>
-        const textArray = [
-            "Digital Marketing Executive",
-            "Lead Generation Specialist",
-            "Meta & Google Ads Expert",
-            "Performance Marketing"
-        ];
+</div>
 
-        let index = 0;
-        let charIndex = 0;
-        let currentText = "";
-        let isDeleting = false;
+<!-- SOFTWARE SKILLS -->
+<div class="section">
+<h2>Software Skills</h2>
 
-        function typeEffect() {
-            currentText = textArray[index];
+<div class="skills">
 
-            if (!isDeleting) {
-                document.getElementById("typing-text").textContent =
-                    currentText.substring(0, charIndex + 1);
-                charIndex++;
+  <a href="https://www.autodesk.com/products/autocad" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/color/48/autocad.png"> AutoCAD
+  </a>
 
-                if (charIndex === currentText.length) {
-                    isDeleting = true;
-                    setTimeout(typeEffect, 1000);
-                    return;
-                }
-            } else {
-                document.getElementById("typing-text").textContent =
-                    currentText.substring(0, charIndex - 1);
-                charIndex--;
+  <a href="https://www.canva.com" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/color/48/canva.png"> Canva
+  </a>
 
-                if (charIndex === 0) {
-                    isDeleting = false;
-                    index = (index + 1) % textArray.length;
-                }
-            }
+  <a href="https://www.microsoft.com/microsoft-365" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/color/48/microsoft-office-2019.png"> MS Office
+  </a>
 
-            setTimeout(typeEffect, isDeleting ? 50 : 100);
-        }
+  <a href="https://wordpress.org" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/color/48/wordpress.png"> WordPress
+  </a>
 
-        document.addEventListener("DOMContentLoaded", typeEffect);
-    </script>
+  <a href="https://analytics.google.com" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/color/48/google-analytics.png"> Analytics
+  </a>
+
+  <a href="https://www.semrush.com" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/fluency/48/search.png"> SEMrush
+  </a>
+
+  <a href="https://yoast.com" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/color/48/seo.png"> Yoast SEO
+  </a>
+
+  <a href="https://search.google.com/search-console" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/color/48/google-logo.png"> Search Console
+  </a>
+
+</div>
+</div>
+
+<!-- TOOLS -->
+<div class="section">
+<h2>Tools</h2>
+
+<div class="skills">
+
+  <a href="https://www.facebook.com/business/ads" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/color/48/meta.png"> Meta Ads
+  </a>
+
+  <a href="https://ads.google.com" target="_blank" class="skill-box">
+    <img src="https://img.icons8.com/color/48/google-ads.png"> Google Ads
+  </a>
+
+</div>
+</div>
+
+<!-- SKILLS -->
+<div class="section">
+<h2>Skills</h2>
+<ul>
+<li>SEO</li>
+<li>Content Writing</li>
+<li>Social Media Marketing</li>
+<li>Keyword Research</li>
+</ul>
+</div>
+
+<!-- PERSONAL -->
+<div class="section">
+<h2>Personal Details</h2>
+<p>Languages: Hindi, English</p>
+<p>Nationality: Indian</p>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p>© 2026 Parth Sharma. All Rights Reserved.</p>
+
+  <div class="footer-icons">
+
+    <a href="https://www.linkedin.com/in/parthsharma23/" target="_blank">
+      <img src="https://img.icons8.com/color/48/linkedin.png">
+    </a>
+
+    <a href="https://web.whatsapp.com" target="_blank">
+      <img src="https://img.icons8.com/color/48/whatsapp.png">
+    </a>
+
+    <a href="https://mail.google.com" target="_blank">
+      <img src="https://img.icons8.com/color/48/gmail.png">
+    </a>
+
+  </div>
+</footer>
+
+</div>
+
+<!-- BUTTONS -->
+<button id="topBtn" onclick="topFunction()">↑</button>
+<button id="themeBtn" onclick="toggleTheme()">🌙</button>
+
+<script>
+
+let btn = document.getElementById("topBtn");
+
+window.onscroll = function () {
+  btn.style.display = document.documentElement.scrollTop > 200 ? "block" : "none";
+};
+
+function topFunction() {
+  window.scrollTo({top: 0, behavior: "smooth"});
+}
+
+function toggleTheme() {
+  document.body.classList.toggle("dark");
+}
+
+</script>
 
 </body>
 </html>
