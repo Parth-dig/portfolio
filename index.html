@@ -3,7 +3,47 @@
 <head>
   <link rel="icon" href="https://img.icons8.com/color/96/seo.png">
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0
+
+  <div class="top-bar">
+  <div class="scroll-text">
+    Welcome to Portfolio Website Of Parth Sharma
+  </div>
+</div>
+
+<style>
+.top-bar {
+  width: 100%;
+  background: #ffffff;
+  overflow: hidden;
+  border-bottom: 1px solid #eee;
+  padding: 10px 0;
+}
+
+/* Moving text */
+.scroll-text {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 15px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  padding-left: 100%;
+  
+  animation: scroll 12s linear infinite;
+
+  /* Smooth gradient text */
+  background: linear-gradient(270deg, #4d79ff, #00c9a7, #ff4d4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+</style>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
 
 <title>Parth Sharma | Portfolio</title>
 
