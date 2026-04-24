@@ -154,7 +154,85 @@ footer {
 </head>
 
 <body>
+<div class="menu-container">
+  <button class="menu-btn" onclick="toggleMenu()">⋮</button>
 
+  <div class="menu-box" id="menuBox">
+
+    <a href="https://wa.me/919817077660" target="_blank">
+      <img src="https://img.icons8.com/color/48/whatsapp.png"> WhatsApp
+    </a>
+
+    <a href="mailto:parthsharma73353@gmail.com">
+      <img src="https://img.icons8.com/color/48/gmail.png"> Email
+    </a>
+
+    <a href="https://www.linkedin.com/in/parthsharma23" target="_blank">
+      <img src="https://img.icons8.com/color/48/linkedin.png"> LinkedIn
+    </a>
+
+  </div>
+</div>
+
+<style>
+.menu-container {
+  position: fixed;
+  top: 15px;
+  right: 60px;
+}
+
+.menu-btn {
+  font-size: 18px;
+  background: var(--card);
+  border-radius: 50%;
+  padding: 6px 10px;
+  cursor: pointer;
+  border: none;
+}
+
+.menu-box {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  background: var(--card);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.menu-box a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: var(--text);
+  font-size: 14px;
+}
+
+.menu-box a:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+.menu-box img {
+  width: 16px;
+  height: 16px;
+}
+</style>
+
+<script>
+function toggleMenu() {
+  let m = document.getElementById("menuBox");
+  m.style.display = m.style.display === "block" ? "none" : "block";
+}
+
+window.onclick = function(e) {
+  if (!e.target.closest('.menu-container')) {
+    document.getElementById("menuBox").style.display = "none";
+  }
+}
+</script>
 <!-- DARK MODE BUTTON -->
 <button id="themeBtn">🌙</button>
 
