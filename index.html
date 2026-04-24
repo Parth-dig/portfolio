@@ -8,8 +8,6 @@
 <title>Parth Sharma | Portfolio</title>
 
 <meta name="description" content="Parth Sharma Digital Marketing Portfolio - SEO, WordPress, Google Ads, Meta Ads">
-<meta name="keywords" content="Parth Sharma, Digital Marketing, SEO Portfolio">
-<meta name="author" content="Parth Sharma">
 
 <style>
 
@@ -46,17 +44,14 @@ body {
   background: var(--card);
   padding: 20px;
   border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 
 /* ===== HEADER ===== */
 header {
   text-align: center;
-  margin-bottom: 10px;
 }
 
 h1 {
-  margin: 0;
   color: var(--primary);
 }
 
@@ -72,12 +67,22 @@ h1 {
   border-radius: 6px;
 }
 
+/* ===== SUB HEADINGS ===== */
+.sub-heading {
+  margin-top: 15px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  color: var(--primary);
+  border-left: 4px solid var(--primary);
+  padding-left: 8px;
+  font-weight: 600;
+}
+
 /* ===== SKILLS ===== */
 .skills {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
-  align-items: center;
 }
 
 .skill-box {
@@ -87,22 +92,13 @@ h1 {
   background: rgba(0,0,0,0.05);
   padding: 8px 12px;
   border-radius: 6px;
-  transition: 0.3s;
   text-decoration: none;
   color: inherit;
 }
 
-body.dark .skill-box {
-  background: rgba(255,255,255,0.08);
-}
-
-.skill-box:hover {
-  transform: scale(1.05);
-}
-
 .skill-box img {
   width: 22px;
-  display: block; /* FIX */
+  display: block;
 }
 
 /* ===== FOOTER ===== */
@@ -115,36 +111,6 @@ footer {
   border-radius: 10px;
 }
 
-/* ===== BUTTONS ===== */
-#topBtn, #themeBtn {
-  position: fixed;
-  right: 20px;
-  border: none;
-  padding: 10px 14px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-#topBtn {
-  bottom: 20px;
-  background: var(--primary);
-  color: white;
-  display: none;
-}
-
-#themeBtn {
-  bottom: 70px;
-  background: #333;
-  color: white;
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 768px) {
-  .container {
-    margin: 10px;
-  }
-}
-
 </style>
 </head>
 
@@ -152,175 +118,70 @@ footer {
 
 <div class="container">
 
-<!-- HEADER -->
 <header>
-  <h1>Parth Sharma</h1>
-  <p>Ghumarwin, Bilaspur, Himachal Pradesh</p>
+<h1>Parth Sharma</h1>
+<p>Ghumarwin, Himachal Pradesh</p>
 </header>
 
-<!-- CAREER -->
 <div class="section">
 <h2>Career Objective</h2>
-<p>To build a strong career in Digital Marketing by mastering SEO, WordPress, Google Ads, Meta Ads and content marketing.</p>
+<p>To build a strong career in Digital Marketing by mastering SEO, WordPress, Google Ads, Meta Ads.</p>
 </div>
 
-<!-- EDUCATION -->
-<div class="section">
-<h2>Education</h2>
-
-<div style="text-align:center; padding:15px;">
-  <p style="margin:0; font-size:16px;"><b>Digital Marketing Course</b></p>
-
-  <p style="margin:5px 0;">
-    <a href="https://cbitss.in" target="_blank" style="color:var(--primary); text-decoration:none; font-weight:bold;">
-      CBitss Institute, Sector 34A Chandigarh
-    </a>
-  </p>
-
-  <a href="https://cbitss.in" target="_blank">
-    <img src="https://rest.techbehemoths.com/storage/images/companies/27278/e26b20ed9ee6e3b8d5afe01fd733ede9.png"
-    style="width:80px; height:auto; margin-top:8px; border-radius:10px; background:white; padding:6px; box-shadow:0 2px 8px rgba(0,0,0,0.15);">
-  </a>
-</div>
-</div>
-
-<!-- SOFTWARE SKILLS -->
-<div class="section">
-<h2>Software Skills</h2>
-
-<div class="skills">
-
- <a href="https://www.autodesk.com/products/autocad/overview" target="_blank" class="skill-box">
-<img src="https://img.icons8.com/color/48/autocad.png"> AutoCAD
- </a>
-
-  <a href="https://www.canva.com" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/canva.png"> Canva
-  </a>
-
-  <a href="https://wordpress.org" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/wordpress.png"> WordPress
-  </a>
-
-  <a href="https://search.google.com/search-console" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/google-logo.png"> Search Console
-  </a>
-
-  <a href="https://analytics.google.com" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/google-analytics.png"> Analytics
-  </a>
-
-  <a href="https://www.semrush.com" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/fluency/48/search.png"> SEMrush
-  </a>
-
-  <a href="https://yoast.com" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/seo.png"> Yoast SEO
-  </a>
-
-</div>
-</div>
-
-<!-- TOOLS -->
-<div class="section">
-<h2>Tools</h2>
-
-<div class="skills">
-
-  <a href="https://ads.google.com" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/google-ads.png"> Google Ads
-  </a>
-
-  <a href="https://www.facebook.com/business/ads" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/meta.png"> Meta Ads
-  </a>
-
-</div>
-</div>
-
-<!-- MY WORK -->
 <div class="section">
 <h2>My Work</h2>
 
+<div class="sub-heading">Course in Chandigarh</div>
 <div class="skills">
 
-  <a href="https://in.pinterest.com/pin/864761565973886409/" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/seo.png">
-    Digital Marketing Course (Chandigarh)
-  </a>
+<a href="https://in.pinterest.com/pin/864761565973886409/" target="_blank" class="skill-box">
+<img src="https://img.icons8.com/color/48/seo.png"> Digital Marketing Course
+</a>
 
-  <a href="https://pin.it/2xDRnVD1d" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/speech-bubble.png">
-    English Speaking Course (Chandigarh)
-  </a>
-
-  <a href="https://docs.google.com/document/d/1KxtG7wZ6KRavoH-vPjVytY9d3d36L4dsbk9iB0gA1D0/edit?tab=t.0" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/google-docs.png">
-    Cbitss.in Audit Report
-  </a>
+<a href="https://pin.it/2xDRnVD1d" target="_blank" class="skill-box">
+<img src="https://img.icons8.com/color/48/speech-bubble.png"> English Speaking Course
+</a>
 
 </div>
-</div>
 
-<!-- CERTIFICATES -->
-<div class="section">
-<h2>Certificates</h2>
-
+<div class="sub-heading">Website Audit Reports</div>
 <div class="skills">
 
-  <a href="https://drive.google.com/file/d/17QtjQ1Jt-33Dxfgf9D4i7AooJ2VqlzFj/view?usp=drivesdk" target="_blank" class="skill-box">
-    <img src="https://img.icons8.com/color/48/certificate.png">
-    AutoCAD Certificate
-  </a>
+<a href="https://docs.google.com/document/d/1KxtG7wZ6KRavoH-vPjVytY9d3d36L4dsbk9iB0gA1D0/edit" target="_blank" class="skill-box">
+<img src="https://img.icons8.com/color/48/google-docs.png"> Cbitss.in
+</a>
+
+<a href="https://docs.google.com/document/d/1nwQg5AO9mlCE0JId1uuqcWcXDQ_z03sepe_Vk52kMa0/edit" target="_blank" class="skill-box">
+<img src="https://img.icons8.com/color/48/google-docs.png"> chandigarhcabexpress.com
+</a>
 
 </div>
+
 </div>
 
-<!-- PERSONAL -->
-<div class="section">
-<h2>Personal Details</h2>
-<p>Languages: Hindi, English</p>
-<p>Nationality: Indian</p>
-</div>
-
-<!-- FOOTER -->
 <footer>
 
-  <p>© 2026 Parth Sharma | All Rights Reserved</p>
+<p>© 2026 Parth Sharma</p>
 
-  <div class="skills" style="justify-content:center; margin-top:10px;">
+<div class="skills" style="justify-content:center; margin-top:10px;">
 
-    <a href="mailto:parthsharma73353@gmail.com" class="skill-box">
-      <img src="https://img.icons8.com/color/48/gmail.png">
-      Email
-    </a>
+<a href="mailto:parthsharma73353@gmail.com" class="skill-box">
+<img src="https://img.icons8.com/color/48/gmail.png"> Email
+</a>
 
-    <a href="https://wa.me/919817077660" target="_blank" class="skill-box">
-      <img src="https://img.icons8.com/color/48/whatsapp.png">
-      WhatsApp
-    </a>
+<a href="https://wa.me/919817077660" target="_blank" class="skill-box">
+<img src="https://img.icons8.com/color/48/whatsapp.png"> WhatsApp
+</a>
 
-    <a href="https://www.linkedin.com/in/parthsharma23" target="_blank" class="skill-box">
-      <img src="https://img.icons8.com/color/48/linkedin.png">
-      LinkedIn
-    </a>
+<a href="https://www.linkedin.com/in/parthsharma23" target="_blank" class="skill-box">
+<img src="https://img.icons8.com/color/48/linkedin.png"> LinkedIn
+</a>
 
-  </div>
+</div>
 
 </footer>
 
 </div>
-
-<!-- BUTTONS -->
-<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
-<button id="themeBtn" onclick="document.body.classList.toggle('dark')">🌙</button>
-
-<script>
-window.onscroll = function () {
-  document.getElementById("topBtn").style.display =
-  document.documentElement.scrollTop > 200 ? "block" : "none";
-};
-</script>
 
 </body>
 </html>
