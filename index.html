@@ -249,6 +249,23 @@ window.onclick = function(e) {
     document.getElementById("menuBox").style.display = "none";
   }
 }
+  .menu-btn {
+  font-size: 22px;
+  background: var(--card);
+  color: var(--text);
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 50%;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: block;
+  z-index: 99999;
+}
+
+/* Dark mode fix */
+body.dark .menu-btn {
+  border: 1px solid rgba(255,255,255,0.3);
+  box-shadow: 0 0 8px rgba(255,255,255,0.1);
+}
 </script>
 <!-- DARK MODE BUTTON -->
 <button id="themeBtn">🌙</button>
@@ -350,18 +367,8 @@ style="width:80px; border-radius:10px;">
 
 <!-- FOOTER -->
 <footer>
-<p>© 2026 Parth Sharma</p>
+<p>© 2026 Parth Sharma | All Rights Reserved</p>
 
-<div class="skills" style="justify-content:center;">
-<a href="mailto:parthsharma73353@gmail.com" class="skill-box">
-<img src="https://img.icons8.com/color/48/gmail.png"> Email</a>
-
-<a href="https://wa.me/919817077660" target="_blank" class="skill-box">
-<img src="https://img.icons8.com/color/48/whatsapp.png"> WhatsApp</a>
-
-<a href="https://www.linkedin.com/in/parthsharma23" target="_blank" class="skill-box">
-<img src="https://img.icons8.com/color/48/linkedin.png"> LinkedIn</a>
-</div>
 </footer>
 
 </div>
