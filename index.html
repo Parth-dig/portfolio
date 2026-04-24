@@ -28,7 +28,7 @@ body.dark {
   --section: #334155;
 }
 
-/* ===== BODY ===== */
+/* BODY */
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -42,7 +42,7 @@ body.dark a {
   color: #38bdf8;
 }
 
-/* ===== MAIN CONTAINER ===== */
+/* CONTAINER */
 .container {
   max-width: 900px;
   margin: 80px auto 20px;
@@ -81,41 +81,36 @@ h1 {
   color: var(--primary);
   border-left: 4px solid var(--primary);
   padding-left: 8px;
-  font-weight: 600;
 }
 
-/* SKILLS */
+/* SKILLS (SMALL BUTTON FIX) */
 .skills {
   display: flex;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: 8px;
 }
 
 .skill-box {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 5px;
   background: rgba(0,0,0,0.05);
-  padding: 8px 12px;
-  border-radius: 6px;
+  padding: 5px 10px;   /* SMALL SIZE */
+  border-radius: 5px;
   text-decoration: none;
   color: inherit;
-  transition: 0.3s;
+  font-size: 13px;     /* SMALL TEXT */
+}
+
+.skill-box img {
+  width: 18px;   /* SMALL ICON */
 }
 
 body.dark .skill-box {
   background: rgba(255,255,255,0.08);
 }
 
-.skill-box:hover {
-  transform: scale(1.05);
-}
-
-.skill-box img {
-  width: 22px;
-}
-
-/* ===== TOP BUTTONS ===== */
+/* TOP BUTTONS (NO BACKGROUND) */
 .menu-container {
   position: fixed;
   top: 15px;
@@ -124,7 +119,7 @@ body.dark .skill-box {
 }
 
 .menu-btn {
-  font-size: 22px;
+  font-size: 18px;
   background: transparent;
   border: none;
   color: var(--text);
@@ -135,14 +130,14 @@ body.dark .skill-box {
   position: fixed;
   top: 15px;
   right: 15px;
-  font-size: 18px;
+  font-size: 16px;
   background: transparent;
   border: none;
   cursor: pointer;
   color: var(--text);
 }
 
-/* MENU BOX */
+/* MENU */
 .menu-box {
   display: none;
   position: absolute;
@@ -152,7 +147,6 @@ body.dark .skill-box {
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   overflow: hidden;
-  min-width: 160px;
 }
 
 .menu-box a {
@@ -162,7 +156,6 @@ body.dark .skill-box {
   padding: 8px 12px;
   text-decoration: none;
   color: var(--text);
-  font-size: 14px;
 }
 
 .menu-box a:hover {
@@ -188,7 +181,7 @@ footer {
 
 <body>
 
-<!-- DARK MODE BUTTON -->
+<!-- DARK MODE -->
 <button id="themeBtn">🌙</button>
 
 <!-- MENU -->
@@ -199,11 +192,9 @@ footer {
     <a href="https://wa.me/919817077660" target="_blank">
       <img src="https://img.icons8.com/color/48/whatsapp.png"> WhatsApp
     </a>
-
     <a href="mailto:parthsharma73353@gmail.com">
       <img src="https://img.icons8.com/color/48/gmail.png"> Email
     </a>
-
     <a href="https://www.linkedin.com/in/parthsharma23" target="_blank">
       <img src="https://img.icons8.com/color/48/linkedin.png"> LinkedIn
     </a>
@@ -228,19 +219,21 @@ footer {
 <b>Digital Marketing Course</b><br>
 <a href="https://cbitss.in" target="_blank">CBitss Institute, Chandigarh</a><br><br>
 <img src="https://rest.techbehemoths.com/storage/images/companies/27278/e26b20ed9ee6e3b8d5afe01fd733ede9.png"
-style="width:80px; border-radius:10px;">
+style="width:130px; border-radius:12px;">
 </div>
 </div>
 
 <div class="section">
 <h2>Software Skills</h2>
 <div class="skills">
+
 <a class="skill-box"><img src="https://img.icons8.com/color/48/autocad.png"> AutoCAD</a>
 <a class="skill-box"><img src="https://img.icons8.com/color/48/canva.png"> Canva</a>
 <a class="skill-box"><img src="https://img.icons8.com/color/48/wordpress.png"> WordPress</a>
 <a class="skill-box"><img src="https://img.icons8.com/color/48/google-analytics.png"> Analytics</a>
 <a class="skill-box"><img src="https://img.icons8.com/fluency/48/search.png"> SEMrush</a>
 <a class="skill-box"><img src="https://img.icons8.com/color/48/seo.png"> Yoast SEO</a>
+
 </div>
 </div>
 
@@ -262,22 +255,22 @@ style="width:80px; border-radius:10px;">
 
 <div class="sub-heading">Course in Chandigarh</div>
 <div class="skills">
-<a href="https://in.pinterest.com/pin/864761565973886409/" class="skill-box">
+<a href="#" class="skill-box">
 <img src="https://img.icons8.com/color/48/seo.png"> Digital Marketing Course
 </a>
 
-<a href="https://pin.it/2xDRnVD1d" class="skill-box">
+<a href="#" class="skill-box">
 <img src="https://img.icons8.com/color/48/speech-bubble.png"> English Speaking Course
 </a>
 </div>
 
 <div class="sub-heading">Website Audit Reports</div>
 <div class="skills">
-<a href="https://docs.google.com/document/d/1KxtG7wZ6KRavoH-vPjVytY9d3d36L4dsbk9iB0gA1D0/edit" class="skill-box">
+<a href="#" class="skill-box">
 <img src="https://img.icons8.com/color/48/google-docs.png"> Cbitss.in
 </a>
 
-<a href="https://docs.google.com/document/d/1nwQg5AO9mlCE0JId1uuqcWcXDQ_z03sepe_Vk52kMa0/edit" class="skill-box">
+<a href="#" class="skill-box">
 <img src="https://img.icons8.com/color/48/google-docs.png"> chandigarhcabexpress.com
 </a>
 </div>
@@ -286,7 +279,7 @@ style="width:80px; border-radius:10px;">
 <div class="section">
 <h2>Certificates</h2>
 <div class="skills">
-<a href="https://drive.google.com/file/d/17QtjQ1Jt-33Dxfgf9D4i7AooJ2VqlzFj/view" class="skill-box">
+<a href="#" class="skill-box">
 <img src="https://img.icons8.com/color/48/certificate.png"> AutoCAD Certificate
 </a>
 </div>
@@ -297,25 +290,7 @@ style="width:80px; border-radius:10px;">
 <p>Languages: Hindi, English</p>
 <p>Nationality: Indian</p>
 </div>
-<script>
-function toggleMenu() {
-  let m = document.getElementById("menuBox");
-  m.style.display = m.style.display === "block" ? "none" : "block";
-}
 
-window.addEventListener("click", function(e) {
-  if (!e.target.closest('.menu-container')) {
-    document.getElementById("menuBox").style.display = "none";
-  }
-});
-
-const btn = document.getElementById("themeBtn");
-
-btn.onclick = () => {
-  document.body.classList.toggle("dark");
-  btn.innerHTML = document.body.classList.contains("dark") ? "☀️" : "🌙";
-};
-</script>
 <footer>
 © 2026 Parth Sharma | All Rights Reserved
 </footer>
@@ -324,15 +299,15 @@ btn.onclick = () => {
 
 <script>
 function toggleMenu() {
-  let m = document.getElementById("menuBox");
-  m.style.display = m.style.display === "block" ? "none" : "block";
+  const menu = document.getElementById("menuBox");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
-window.onclick = function(e) {
+window.addEventListener("click", function(e) {
   if (!e.target.closest('.menu-container')) {
     document.getElementById("menuBox").style.display = "none";
   }
-}
+});
 
 const btn = document.getElementById("themeBtn");
 
