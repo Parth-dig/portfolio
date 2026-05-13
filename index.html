@@ -1,321 +1,463 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<link rel="icon" type="image/jpeg" href="webs.jpeg">
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Parth Sharma | Portfolio</title>
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return;
+      n = f.fbq = function () {
+        n.callMethod ?
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n;
+      n.push = n;
+      n.loaded = !0;
+      n.version = '2.0';
+      n.queue = [];
+      t = b.createElement(e);
+      t.async = !0;
+      t.src = v;
+      s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
 
-<meta name="description" content="Parth Sharma Digital Marketing Portfolio - SEO, WordPress, Google Ads, Meta Ads">
+    fbq('init', '1457733435559576');
+    fbq('track', 'PageView');
+  </script>
 
-<style>
+  <noscript>
+    <img height="1" width="1" style="display:none"
+      src="https://www.facebook.com/tr?id=1457733435559576&ev=PageView&noscript=1" />
+  </noscript>
+  <!-- End Meta Pixel Code -->
 
-/* ===== THEME ===== */
-:root {
-  --bg: #f4f6f9;
-  --card: #ffffff;
-  --text: #111;
-  --primary: #0d6efd;
-  --section: #0d6efd;
-}
+  <link rel="icon" type="image/jpeg" href="webs.jpeg">
 
-body.dark {
-  --bg: #0f172a;
-  --card: #1e293b;
-  --text: #f1f5f9;
-  --primary: #38bdf8;
-  --section: #334155;
-}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-/* BODY */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  transition: 0.3s;
-}
+  <title>Parth Sharma | Portfolio</title>
 
-/* LINKS */
-body.dark a {
-  color: #38bdf8;
-}
+  <meta name="description"
+    content="Parth Sharma Digital Marketing Portfolio - SEO, WordPress, Google Ads, Meta Ads">
 
-/* CONTAINER */
-.container {
-  max-width: 900px;
-  margin: 80px auto 20px;
-  background: var(--card);
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
+  <style>
+    /* ===== THEME ===== */
+    :root {
+      --bg: #f4f6f9;
+      --card: #ffffff;
+      --text: #111;
+      --primary: #0d6efd;
+      --section: #0d6efd;
+    }
 
-/* HEADER */
-header {
-  text-align: center;
-}
+    body.dark {
+      --bg: #0f172a;
+      --card: #1e293b;
+      --text: #f1f5f9;
+      --primary: #38bdf8;
+      --section: #334155;
+    }
 
-h1 {
-  color: var(--primary);
-}
+    /* BODY */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      transition: 0.3s;
+    }
 
-/* SECTIONS */
-.section {
-  margin-top: 25px;
-}
+    /* LINKS */
+    body.dark a {
+      color: #38bdf8;
+    }
 
-.section h2 {
-  background: var(--section);
-  color: white;
-  padding: 10px;
-  border-radius: 6px;
-}
+    /* CONTAINER */
+    .container {
+      max-width: 900px;
+      margin: 80px auto 20px;
+      background: var(--card);
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 
-/* SUB HEADING */
-.sub-heading {
-  margin-top: 15px;
-  margin-bottom: 8px;
-  font-size: 16px;
-  color: var(--primary);
-  border-left: 4px solid var(--primary);
-  padding-left: 8px;
-}
+    /* HEADER */
+    header {
+      text-align: center;
+    }
 
-/* SKILLS (SMALL BUTTON FIX) */
-.skills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-}
+    h1 {
+      color: var(--primary);
+    }
 
-.skill-box {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  background: rgba(0,0,0,0.05);
-  padding: 5px 10px;   /* SMALL SIZE */
-  border-radius: 5px;
-  text-decoration: none;
-  color: inherit;
-  font-size: 13px;     /* SMALL TEXT */
-}
+    /* SECTIONS */
+    .section {
+      margin-top: 25px;
+    }
 
-.skill-box img {
-  width: 18px;   /* SMALL ICON */
-}
+    .section h2 {
+      background: var(--section);
+      color: white;
+      padding: 10px;
+      border-radius: 6px;
+    }
 
-body.dark .skill-box {
-  background: rgba(255,255,255,0.08);
-}
+    /* SUB HEADING */
+    .sub-heading {
+      margin-top: 15px;
+      margin-bottom: 8px;
+      font-size: 16px;
+      color: var(--primary);
+      border-left: 4px solid var(--primary);
+      padding-left: 8px;
+    }
 
-/* TOP BUTTONS (NO BACKGROUND) */
-.menu-container {
-  position: fixed;
-  top: 15px;
-  right: 60px;
-  z-index: 9999;
-}
+    /* SKILLS */
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
 
-.menu-btn {
-  font-size: 18px;
-  background: transparent;
-  border: none;
-  color: var(--text);
-  cursor: pointer;
-}
+    .skill-box {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 5px 10px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: inherit;
+      font-size: 13px;
+    }
 
-#themeBtn {
-  position: fixed;
-  top: 15px;
-  right: 15px;
-  font-size: 16px;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  color: var(--text);
-}
+    .skill-box img {
+      width: 18px;
+    }
 
-/* MENU */
-.menu-box {
-  display: none;
-  position: absolute;
-  right: 0;
-  top: 40px;
-  background: var(--card);
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  overflow: hidden;
-}
+    body.dark .skill-box {
+      background: rgba(255, 255, 255, 0.08);
+    }
 
-.menu-box a {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  padding: 8px 12px;
-  text-decoration: none;
-  color: var(--text);
-}
+    /* TOP BUTTONS */
+    .menu-container {
+      position: fixed;
+      top: 15px;
+      right: 60px;
+      z-index: 9999;
+    }
 
-.menu-box a:hover {
-  background: rgba(0,0,0,0.05);
-}
+    .menu-btn {
+      font-size: 18px;
+      background: transparent;
+      border: none;
+      color: var(--text);
+      cursor: pointer;
+    }
 
-.menu-box img {
-  width: 16px;
-}
+    #themeBtn {
+      position: fixed;
+      top: 15px;
+      right: 15px;
+      font-size: 16px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      color: var(--text);
+    }
 
-/* FOOTER */
-footer {
-  text-align: center;
-  margin-top: 30px;
-  padding: 15px;
-  background: var(--section);
-  color: white;
-  border-radius: 10px;
-}
+    /* MENU */
+    .menu-box {
+      display: none;
+      position: absolute;
+      right: 0;
+      top: 40px;
+      background: var(--card);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      overflow: hidden;
+      min-width: 180px;
+    }
 
-</style>
+    .menu-box a {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 12px;
+      text-decoration: none;
+      color: var(--text);
+    }
+
+    .menu-box a:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .menu-box img {
+      width: 16px;
+    }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      padding: 15px;
+      background: var(--section);
+      color: white;
+      border-radius: 10px;
+    }
+
+    /* MOBILE */
+    @media(max-width:768px) {
+      .container {
+        margin: 70px 10px 20px;
+        padding: 15px;
+      }
+
+      .skills {
+        gap: 6px;
+      }
+
+      .skill-box {
+        font-size: 12px;
+      }
+    }
+  </style>
+
 </head>
 
 <body>
 
-<!-- DARK MODE -->
-<button id="themeBtn">🌙</button>
+  <!-- DARK MODE BUTTON -->
+  <button id="themeBtn">🌙</button>
 
-<!-- MENU -->
-<div class="menu-container">
-  <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+  <!-- MENU -->
+  <div class="menu-container">
 
-  <div class="menu-box" id="menuBox">
-    <a href="https://wa.me/919817077660" target="_blank">
-      <img src="https://img.icons8.com/color/48/whatsapp.png"> WhatsApp
-    </a>
-    <a href="https://mail.google.com/mail/u/0/?fs=1&to=parthsharma73353@gmail.com">
-      <img src="https://img.icons8.com/color/48/gmail.png"> Email
-    </a>
-    <a href="https://www.linkedin.com/in/parthsharma23" target="_blank">
-      <img src="https://img.icons8.com/color/48/linkedin.png"> LinkedIn
-    </a>
+    <button class="menu-btn" onclick="toggleMenu()">⋮</button>
+
+    <div class="menu-box" id="menuBox">
+
+      <a href="https://wa.me/919817077660" target="_blank">
+        <img src="https://img.icons8.com/color/48/whatsapp.png" alt="">
+        WhatsApp
+      </a>
+
+      <a href="mailto:parthsharma73353@gmail.com">
+        <img src="https://img.icons8.com/color/48/gmail.png" alt="">
+        Email
+      </a>
+
+      <a href="https://www.linkedin.com/in/parthsharma23" target="_blank">
+        <img src="https://img.icons8.com/color/48/linkedin.png" alt="">
+        LinkedIn
+      </a>
+
+    </div>
+
   </div>
-</div>
 
-<div class="container">
+  <div class="container">
 
-<header>
-<h1>Parth Sharma</h1>
-<p>Ghumarwin, Bilaspur, Himachal Pradesh</p>
-</header>
+    <header>
+      <h1>Parth Sharma</h1>
+      <p>Ghumarwin, Bilaspur, Himachal Pradesh</p>
+    </header>
 
-<div class="section">
-<h2>Career Objective</h2>
-<p>To build a strong career in Digital Marketing by mastering SEO, WordPress, Google Ads, Meta Ads and content marketing.</p>
-</div>
+    <div class="section">
+      <h2>Career Objective</h2>
 
-<div class="section">
-<h2>Education</h2>
-<div style="text-align:center;">
-<b>Digital Marketing Course</b><br>
-<a href="https://cbitss.in" target="_blank">CBitss Institute, Chandigarh</a><br><br>
-<img src="https://rest.techbehemoths.com/storage/images/companies/27278/e26b20ed9ee6e3b8d5afe01fd733ede9.png"
-style="width:130px; border-radius:12px;">
-</div>
-</div>
+      <p>
+        To build a strong career in Digital Marketing by mastering SEO,
+        WordPress, Google Ads, Meta Ads and content marketing.
+      </p>
+    </div>
 
-<div class="section">
-<h2>Software Skills</h2>
-<div class="skills">
+    <div class="section">
 
-<a class="skill-box"><img src="https://img.icons8.com/color/48/autocad.png"> AutoCAD</a>
-<a class="skill-box"><img src="https://img.icons8.com/color/48/canva.png"> Canva</a>
-<a class="skill-box"><img src="https://img.icons8.com/color/48/wordpress.png"> WordPress</a>
-<a class="skill-box"><img src="https://img.icons8.com/color/48/google-analytics.png"> Analytics</a>
-<a class="skill-box"><img src="https://img.icons8.com/fluency/48/search.png"> SEMrush</a>
-<a class="skill-box"><img src="https://img.icons8.com/color/48/seo.png"> Yoast SEO</a>
+      <h2>Education</h2>
 
-</div>
-</div>
+      <div style="text-align:center;">
 
-<div class="section">
-<h2>Tools</h2>
-<div class="skills">
-<a href="https://ads.google.com" class="skill-box">
-<img src="https://img.icons8.com/color/48/google-ads.png"> Google Ads
-</a>
+        <b>Digital Marketing Course</b><br>
 
-<a href="https://www.facebook.com/business/ads" class="skill-box">
-<img src="https://img.icons8.com/color/48/meta.png"> Meta Ads
-</a>
-</div>
-</div>
+        <a href="https://cbitss.in" target="_blank">
+          CBitss Institute, Chandigarh
+        </a>
 
-<div class="section">
-<h2>My Work</h2>
+        <br><br>
 
-<div class="sub-heading">Course in Chandigarh</div>
-<div class="skills">
-<a href="#" class="skill-box">
-<img src="https://img.icons8.com/color/48/seo.png"> Digital Marketing Course
-</a>
+        <img
+          src="https://rest.techbehemoths.com/storage/images/companies/27278/e26b20ed9ee6e3b8d5afe01fd733ede9.png"
+          style="width:130px; border-radius:12px;" alt="CBitss">
 
-<a href="#" class="skill-box">
-<img src="https://img.icons8.com/color/48/speech-bubble.png"> English Speaking Course
-</a>
-</div>
+      </div>
 
-<div class="sub-heading">Website Audit Reports</div>
-<div class="skills">
-<a href="#" class="skill-box">
-<img src="https://img.icons8.com/color/48/google-docs.png"> Cbitss.in
-</a>
+    </div>
 
-<a href="#" class="skill-box">
-<img src="https://img.icons8.com/color/48/google-docs.png"> chandigarhcabexpress.com
-</a>
-</div>
-</div>
+    <div class="section">
 
-<div class="section">
-<h2>Certificates</h2>
-<div class="skills">
-<a href="#" class="skill-box">
-<img src="https://img.icons8.com/color/48/certificate.png"> AutoCAD Certificate
-</a>
-</div>
-</div>
+      <h2>Software Skills</h2>
 
-<div class="section">
-<h2>Personal Details</h2>
-<p>Languages: Hindi, English</p>
-<p>Nationality: Indian</p>
-</div>
+      <div class="skills">
 
-<footer>
-© 2026 Parth Sharma | All Rights Reserved
-</footer>
+        <a class="skill-box">
+          <img src="https://img.icons8.com/color/48/autocad.png" alt="">
+          AutoCAD
+        </a>
 
-</div>
+        <a class="skill-box">
+          <img src="https://img.icons8.com/color/48/canva.png" alt="">
+          Canva
+        </a>
 
-<script>
-function toggleMenu() {
-  const menu = document.getElementById("menuBox");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
+        <a class="skill-box">
+          <img src="https://img.icons8.com/color/48/wordpress.png" alt="">
+          WordPress
+        </a>
 
-window.addEventListener("click", function(e) {
-  if (!e.target.closest('.menu-container')) {
-    document.getElementById("menuBox").style.display = "none";
-  }
-});
+        <a class="skill-box">
+          <img src="https://img.icons8.com/color/48/google-analytics.png" alt="">
+          Analytics
+        </a>
 
-const btn = document.getElementById("themeBtn");
+        <a class="skill-box">
+          <img src="https://img.icons8.com/fluency/48/search.png" alt="">
+          SEMrush
+        </a>
 
-btn.onclick = () => {
-  document.body.classList.toggle("dark");
-  btn.innerHTML = document.body.classList.contains("dark") ? "☀️" : "🌙";
-};
-</script>
+        <a class="skill-box">
+          <img src="https://img.icons8.com/color/48/seo.png" alt="">
+          Yoast SEO
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Tools</h2>
+
+      <div class="skills">
+
+        <a href="https://ads.google.com" class="skill-box" target="_blank">
+          <img src="https://img.icons8.com/color/48/google-ads.png" alt="">
+          Google Ads
+        </a>
+
+        <a href="https://www.facebook.com/business/ads" class="skill-box" target="_blank">
+          <img src="https://img.icons8.com/color/48/meta.png" alt="">
+          Meta Ads
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="section">
+
+      <h2>My Work</h2>
+
+      <div class="sub-heading">Course in Chandigarh</div>
+
+      <div class="skills">
+
+        <a href="#" class="skill-box">
+          <img src="https://img.icons8.com/color/48/seo.png" alt="">
+          Digital Marketing Course
+        </a>
+
+        <a href="#" class="skill-box">
+          <img src="https://img.icons8.com/color/48/speech-bubble.png" alt="">
+          English Speaking Course
+        </a>
+
+      </div>
+
+      <div class="sub-heading">Website Audit Reports</div>
+
+      <div class="skills">
+
+        <a href="#" class="skill-box">
+          <img src="https://img.icons8.com/color/48/google-docs.png" alt="">
+          Cbitss.in
+        </a>
+
+        <a href="#" class="skill-box">
+          <img src="https://img.icons8.com/color/48/google-docs.png" alt="">
+          chandigarhcabexpress.com
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Certificates</h2>
+
+      <div class="skills">
+
+        <a href="#" class="skill-box">
+          <img src="https://img.icons8.com/color/48/certificate.png" alt="">
+          AutoCAD Certificate
+        </a>
+
+      </div>
+
+    </div>
+
+    <div class="section">
+
+      <h2>Personal Details</h2>
+
+      <p>Languages: Hindi, English</p>
+      <p>Nationality: Indian</p>
+
+    </div>
+
+    <footer>
+      © 2026 Parth Sharma | All Rights Reserved
+    </footer>
+
+  </div>
+
+  <script>
+
+    function toggleMenu() {
+      const menu = document.getElementById("menuBox");
+
+      menu.style.display =
+        menu.style.display === "block" ? "none" : "block";
+    }
+
+    window.addEventListener("click", function (e) {
+
+      if (!e.target.closest('.menu-container')) {
+        document.getElementById("menuBox").style.display = "none";
+      }
+
+    });
+
+    const btn = document.getElementById("themeBtn");
+
+    btn.onclick = () => {
+
+      document.body.classList.toggle("dark");
+
+      btn.innerHTML =
+        document.body.classList.contains("dark")
+          ? "☀️"
+          : "🌙";
+    };
+
+  </script>
 
 </body>
+
 </html>
