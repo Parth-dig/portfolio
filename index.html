@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,16 +12,21 @@
         n.callMethod ?
           n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
+
       if (!f._fbq) f._fbq = n;
+
       n.push = n;
       n.loaded = !0;
       n.version = '2.0';
       n.queue = [];
+
       t = b.createElement(e);
       t.async = !0;
       t.src = v;
+
       s = b.getElementsByTagName(e)[0];
       s.parentNode.insertBefore(t, s)
+
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
 
@@ -34,18 +40,23 @@
   </noscript>
   <!-- End Meta Pixel Code -->
 
-  <link rel="icon" type="image/jpeg" href="webs.jpeg">
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Parth Sharma | Portfolio</title>
+  <title>Parth Sharma | Digital Marketing Portfolio</title>
 
   <meta name="description"
     content="Parth Sharma Digital Marketing Portfolio - SEO, WordPress, Google Ads, Meta Ads">
 
+  <!-- SEO -->
+  <meta property="og:title" content="Parth Sharma Portfolio">
+  <meta property="og:description" content="Digital Marketing Portfolio">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="webs.jpeg">
+
   <style>
-    /* ===== THEME ===== */
     :root {
       --bg: #f4f6f9;
       --card: #ffffff;
@@ -62,40 +73,40 @@
       --section: #334155;
     }
 
-    /* BODY */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
+      font-family: Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
       transition: 0.3s;
     }
 
-    /* LINKS */
     body.dark a {
       color: #38bdf8;
     }
 
-    /* CONTAINER */
     .container {
       max-width: 900px;
       margin: 80px auto 20px;
       background: var(--card);
       padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 14px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.1);
     }
 
-    /* HEADER */
     header {
       text-align: center;
     }
 
     h1 {
       color: var(--primary);
+      margin-bottom: 5px;
     }
 
-    /* SECTIONS */
     .section {
       margin-top: 25px;
     }
@@ -107,7 +118,6 @@
       border-radius: 6px;
     }
 
-    /* SUB HEADING */
     .sub-heading {
       margin-top: 15px;
       margin-bottom: 8px;
@@ -117,34 +127,38 @@
       padding-left: 8px;
     }
 
-    /* SKILLS */
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 8px;
+      gap: 10px;
     }
 
     .skill-box {
       display: flex;
       align-items: center;
-      gap: 5px;
-      background: rgba(0, 0, 0, 0.05);
-      padding: 5px 10px;
-      border-radius: 5px;
+      gap: 6px;
+      background: rgba(0,0,0,0.05);
+      padding: 8px 12px;
+      border-radius: 8px;
       text-decoration: none;
       color: inherit;
       font-size: 13px;
+      transition: 0.3s;
+    }
+
+    .skill-box:hover {
+      transform: translateY(-3px);
+      background: rgba(13,110,253,0.1);
+    }
+
+    body.dark .skill-box {
+      background: rgba(255,255,255,0.08);
     }
 
     .skill-box img {
       width: 18px;
     }
 
-    body.dark .skill-box {
-      background: rgba(255, 255, 255, 0.08);
-    }
-
-    /* TOP BUTTONS */
     .menu-container {
       position: fixed;
       top: 15px;
@@ -153,7 +167,7 @@
     }
 
     .menu-btn {
-      font-size: 18px;
+      font-size: 22px;
       background: transparent;
       border: none;
       color: var(--text);
@@ -164,44 +178,49 @@
       position: fixed;
       top: 15px;
       right: 15px;
-      font-size: 16px;
+      font-size: 18px;
       background: transparent;
       border: none;
       cursor: pointer;
       color: var(--text);
     }
 
-    /* MENU */
     .menu-box {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
       position: absolute;
       right: 0;
       top: 40px;
       background: var(--card);
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
       overflow: hidden;
       min-width: 180px;
+      transition: 0.3s;
+    }
+
+    .menu-box.show {
+      opacity: 1;
+      visibility: visible;
     }
 
     .menu-box a {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 10px 12px;
+      padding: 12px;
       text-decoration: none;
       color: var(--text);
     }
 
     .menu-box a:hover {
-      background: rgba(0, 0, 0, 0.05);
+      background: rgba(0,0,0,0.05);
     }
 
     .menu-box img {
-      width: 16px;
+      width: 18px;
     }
 
-    /* FOOTER */
     footer {
       text-align: center;
       margin-top: 30px;
@@ -211,7 +230,6 @@
       border-radius: 10px;
     }
 
-    /* MOBILE */
     @media(max-width:768px) {
       .container {
         margin: 70px 10px 20px;
@@ -232,7 +250,7 @@
 
 <body>
 
-  <!-- DARK MODE BUTTON -->
+  <!-- DARK MODE -->
   <button id="themeBtn">🌙</button>
 
   <!-- MENU -->
@@ -242,18 +260,18 @@
 
     <div class="menu-box" id="menuBox">
 
-      <a href="https://wa.me/919817077660" target="_blank">
-        <img src="https://img.icons8.com/color/48/whatsapp.png" alt="">
+      <a href="https://wa.me/919817077660" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp">
         WhatsApp
       </a>
 
       <a href="mailto:parthsharma73353@gmail.com">
-        <img src="https://img.icons8.com/color/48/gmail.png" alt="">
+        <img src="https://img.icons8.com/color/48/gmail.png" alt="Email">
         Email
       </a>
 
-      <a href="https://www.linkedin.com/in/parthsharma23" target="_blank">
-        <img src="https://img.icons8.com/color/48/linkedin.png" alt="">
+      <a href="https://www.linkedin.com/in/parthsharma23" target="_blank" rel="noopener noreferrer">
+        <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn">
         LinkedIn
       </a>
 
@@ -264,17 +282,22 @@
   <div class="container">
 
     <header>
+
       <h1>Parth Sharma</h1>
+
       <p>Ghumarwin, Bilaspur, Himachal Pradesh</p>
+
     </header>
 
     <div class="section">
+
       <h2>Career Objective</h2>
 
       <p>
         To build a strong career in Digital Marketing by mastering SEO,
         WordPress, Google Ads, Meta Ads and content marketing.
       </p>
+
     </div>
 
     <div class="section">
@@ -293,7 +316,8 @@
 
         <img
           src="https://rest.techbehemoths.com/storage/images/companies/27278/e26b20ed9ee6e3b8d5afe01fd733ede9.png"
-          style="width:130px; border-radius:12px;" alt="CBitss">
+          style="width:130px; border-radius:12px;"
+          alt="CBitss">
 
       </div>
 
@@ -305,34 +329,64 @@
 
       <div class="skills">
 
-        <a class="skill-box">
-          <img src="https://img.icons8.com/color/48/autocad.png" alt="">
+        <a href="https://www.autodesk.com/products/autocad"
+          class="skill-box" target="_blank">
+
+          <img src="https://img.icons8.com/color/48/autocad.png"
+            alt="AutoCAD">
+
           AutoCAD
+
         </a>
 
-        <a class="skill-box">
-          <img src="https://img.icons8.com/color/48/canva.png" alt="">
+        <a href="https://www.canva.com"
+          class="skill-box" target="_blank">
+
+          <img src="https://img.icons8.com/color/48/canva.png"
+            alt="Canva">
+
           Canva
+
         </a>
 
-        <a class="skill-box">
-          <img src="https://img.icons8.com/color/48/wordpress.png" alt="">
+        <a href="https://wordpress.org"
+          class="skill-box" target="_blank">
+
+          <img src="https://img.icons8.com/color/48/wordpress.png"
+            alt="WordPress">
+
           WordPress
+
         </a>
 
-        <a class="skill-box">
-          <img src="https://img.icons8.com/color/48/google-analytics.png" alt="">
-          Analytics
+        <a href="https://analytics.google.com"
+          class="skill-box" target="_blank">
+
+          <img src="https://img.icons8.com/color/48/google-analytics.png"
+            alt="Google Analytics">
+
+          Google Analytics
+
         </a>
 
-        <a class="skill-box">
-          <img src="https://img.icons8.com/fluency/48/search.png" alt="">
+        <a href="https://www.semrush.com"
+          class="skill-box" target="_blank">
+
+          <img src="https://img.icons8.com/fluency/48/search.png"
+            alt="SEMrush">
+
           SEMrush
+
         </a>
 
-        <a class="skill-box">
-          <img src="https://img.icons8.com/color/48/seo.png" alt="">
+        <a href="https://yoast.com/wordpress/plugins/seo/"
+          class="skill-box" target="_blank">
+
+          <img src="https://img.icons8.com/color/48/seo.png"
+            alt="Yoast SEO">
+
           Yoast SEO
+
         </a>
 
       </div>
@@ -341,71 +395,28 @@
 
     <div class="section">
 
-      <h2>Tools</h2>
+      <h2>Advertising Tools</h2>
 
       <div class="skills">
 
-        <a href="https://ads.google.com" class="skill-box" target="_blank">
-          <img src="https://img.icons8.com/color/48/google-ads.png" alt="">
+        <a href="https://ads.google.com"
+          class="skill-box" target="_blank">
+
+          <img src="https://img.icons8.com/color/48/google-ads.png"
+            alt="Google Ads">
+
           Google Ads
+
         </a>
 
-        <a href="https://www.facebook.com/business/ads" class="skill-box" target="_blank">
-          <img src="https://img.icons8.com/color/48/meta.png" alt="">
+        <a href="https://www.facebook.com/business/ads"
+          class="skill-box" target="_blank">
+
+          <img src="https://img.icons8.com/color/48/meta.png"
+            alt="Meta Ads">
+
           Meta Ads
-        </a>
 
-      </div>
-
-    </div>
-
-    <div class="section">
-
-      <h2>My Work</h2>
-
-      <div class="sub-heading">Course in Chandigarh</div>
-
-      <div class="skills">
-
-        <a href="#" class="skill-box">
-          <img src="https://img.icons8.com/color/48/seo.png" alt="">
-          Digital Marketing Course
-        </a>
-
-        <a href="#" class="skill-box">
-          <img src="https://img.icons8.com/color/48/speech-bubble.png" alt="">
-          English Speaking Course
-        </a>
-
-      </div>
-
-      <div class="sub-heading">Website Audit Reports</div>
-
-      <div class="skills">
-
-        <a href="#" class="skill-box">
-          <img src="https://img.icons8.com/color/48/google-docs.png" alt="">
-          Cbitss.in
-        </a>
-
-        <a href="#" class="skill-box">
-          <img src="https://img.icons8.com/color/48/google-docs.png" alt="">
-          chandigarhcabexpress.com
-        </a>
-
-      </div>
-
-    </div>
-
-    <div class="section">
-
-      <h2>Certificates</h2>
-
-      <div class="skills">
-
-        <a href="#" class="skill-box">
-          <img src="https://img.icons8.com/color/48/certificate.png" alt="">
-          AutoCAD Certificate
         </a>
 
       </div>
@@ -417,12 +428,15 @@
       <h2>Personal Details</h2>
 
       <p>Languages: Hindi, English</p>
+
       <p>Nationality: Indian</p>
 
     </div>
 
     <footer>
+
       © 2026 Parth Sharma | All Rights Reserved
+
     </footer>
 
   </div>
@@ -430,16 +444,20 @@
   <script>
 
     function toggleMenu() {
+
       const menu = document.getElementById("menuBox");
 
-      menu.style.display =
-        menu.style.display === "block" ? "none" : "block";
+      menu.classList.toggle("show");
+
     }
 
     window.addEventListener("click", function (e) {
 
       if (!e.target.closest('.menu-container')) {
-        document.getElementById("menuBox").style.display = "none";
+
+        document.getElementById("menuBox")
+          .classList.remove("show");
+
       }
 
     });
@@ -454,6 +472,7 @@
         document.body.classList.contains("dark")
           ? "☀️"
           : "🌙";
+
     };
 
   </script>
@@ -461,3 +480,4 @@
 </body>
 
 </html>
+```
