@@ -1,4 +1,3 @@
-```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,22 +7,18 @@
   <script>
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return;
-
       n = f.fbq = function () {
         n.callMethod ?
-          n.callMethod.apply(n, arguments) :
-          n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
       };
-
       if (!f._fbq) f._fbq = n;
-
       n.push = n;
-      n.loaded = true;
+      n.loaded = !0;
       n.version = '2.0';
       n.queue = [];
 
       t = b.createElement(e);
-      t.async = true;
+      t.async = !0;
       t.src = v;
 
       s = b.getElementsByTagName(e)[0];
@@ -34,13 +29,13 @@
 
     fbq('init', '1457733435559576');
     fbq('track', 'PageView');
-
   </script>
 
   <noscript>
     <img height="1" width="1" style="display:none"
       src="https://www.facebook.com/tr?id=1457733435559576&ev=PageView&noscript=1" />
   </noscript>
+  <!-- End Meta Pixel Code -->
 
   <!-- META -->
   <meta charset="UTF-8">
@@ -56,7 +51,7 @@
   <meta property="og:type" content="website">
 
   <!-- FAVICON -->
-  <link rel="icon" href="webs.jpeg">
+  <link rel="icon" type="image/jpeg" href="webs.jpeg">
 
   <style>
 
@@ -76,20 +71,16 @@
       --section: #334155;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      margin: 0;
       font-family: Arial, sans-serif;
+      margin: 0;
       background: var(--bg);
       color: var(--text);
       transition: 0.3s;
     }
 
-    a {
-      color: inherit;
+    body.dark a {
+      color: #38bdf8;
     }
 
     .container {
@@ -97,8 +88,8 @@
       margin: 80px auto 20px;
       background: var(--card);
       padding: 20px;
-      border-radius: 14px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
 
     header {
@@ -107,7 +98,6 @@
 
     h1 {
       color: var(--primary);
-      margin-bottom: 5px;
     }
 
     .section {
@@ -133,36 +123,36 @@
     .skills {
       display: flex;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
     }
 
     .skill-box {
       display: flex;
       align-items: center;
-      gap: 6px;
-      background: rgba(0,0,0,0.05);
-      padding: 8px 12px;
-      border-radius: 8px;
+      gap: 5px;
+      background: rgba(0, 0, 0, 0.05);
+      padding: 7px 12px;
+      border-radius: 6px;
       text-decoration: none;
+      color: inherit;
       font-size: 13px;
       transition: 0.3s;
-      cursor: pointer;
     }
 
     .skill-box:hover {
-      transform: translateY(-3px);
-      background: rgba(13,110,253,0.1);
-    }
-
-    body.dark .skill-box {
-      background: rgba(255,255,255,0.08);
+      transform: translateY(-2px);
+      background: rgba(13, 110, 253, 0.1);
     }
 
     .skill-box img {
       width: 18px;
     }
 
-    /* MENU */
+    body.dark .skill-box {
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    /* TOP BUTTONS */
 
     .menu-container {
       position: fixed;
@@ -172,7 +162,7 @@
     }
 
     .menu-btn {
-      font-size: 22px;
+      font-size: 18px;
       background: transparent;
       border: none;
       color: var(--text);
@@ -183,46 +173,42 @@
       position: fixed;
       top: 15px;
       right: 15px;
-      font-size: 18px;
+      font-size: 16px;
       background: transparent;
       border: none;
       cursor: pointer;
       color: var(--text);
     }
 
+    /* MENU */
+
     .menu-box {
-      opacity: 0;
-      visibility: hidden;
+      display: none;
       position: absolute;
       right: 0;
       top: 40px;
       background: var(--card);
-      border-radius: 10px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
       overflow: hidden;
       min-width: 180px;
-      transition: 0.3s;
-    }
-
-    .menu-box.show {
-      opacity: 1;
-      visibility: visible;
     }
 
     .menu-box a {
       display: flex;
       align-items: center;
       gap: 8px;
-      padding: 12px;
+      padding: 10px 12px;
       text-decoration: none;
+      color: var(--text);
     }
 
     .menu-box a:hover {
-      background: rgba(0,0,0,0.05);
+      background: rgba(0, 0, 0, 0.05);
     }
 
     .menu-box img {
-      width: 18px;
+      width: 16px;
     }
 
     footer {
@@ -241,6 +227,10 @@
         padding: 15px;
       }
 
+      .skills {
+        gap: 6px;
+      }
+
       .skill-box {
         font-size: 12px;
       }
@@ -253,7 +243,7 @@
 
 <body>
 
-  <!-- DARK MODE -->
+  <!-- DARK MODE BUTTON -->
   <button id="themeBtn">🌙</button>
 
   <!-- MENU -->
@@ -264,7 +254,8 @@
     <div class="menu-box" id="menuBox">
 
       <a href="https://wa.me/919817077660"
-        onclick="window.open(this.href); return false;">
+        target="_blank"
+        rel="noopener noreferrer">
 
         <img src="https://img.icons8.com/color/48/whatsapp.png"
           alt="WhatsApp">
@@ -283,7 +274,8 @@
       </a>
 
       <a href="https://www.linkedin.com/in/parthsharma23"
-        onclick="window.open(this.href); return false;">
+        target="_blank"
+        rel="noopener noreferrer">
 
         <img src="https://img.icons8.com/color/48/linkedin.png"
           alt="LinkedIn">
@@ -306,7 +298,7 @@
 
     </header>
 
-    <!-- CAREER -->
+    <!-- Career -->
 
     <div class="section">
 
@@ -319,7 +311,7 @@
 
     </div>
 
-    <!-- EDUCATION -->
+    <!-- Education -->
 
     <div class="section">
 
@@ -330,7 +322,8 @@
         <b>Digital Marketing Course</b><br>
 
         <a href="https://cbitss.in"
-          onclick="window.open(this.href); return false;">
+          target="_blank"
+          rel="noopener noreferrer">
 
           CBitss Institute, Chandigarh
 
@@ -347,7 +340,7 @@
 
     </div>
 
-    <!-- SOFTWARE SKILLS -->
+    <!-- Software Skills -->
 
     <div class="section">
 
@@ -357,9 +350,11 @@
 
         <a href="https://www.autodesk.com/products/autocad"
           class="skill-box"
-          onclick="window.open(this.href); return false;">
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <img src="https://img.icons8.com/color/48/autocad.png">
+          <img src="https://img.icons8.com/color/48/autocad.png"
+            alt="AutoCAD">
 
           AutoCAD
 
@@ -367,9 +362,11 @@
 
         <a href="https://www.canva.com"
           class="skill-box"
-          onclick="window.open(this.href); return false;">
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <img src="https://img.icons8.com/color/48/canva.png">
+          <img src="https://img.icons8.com/color/48/canva.png"
+            alt="Canva">
 
           Canva
 
@@ -377,9 +374,11 @@
 
         <a href="https://wordpress.org"
           class="skill-box"
-          onclick="window.open(this.href); return false;">
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <img src="https://img.icons8.com/color/48/wordpress.png">
+          <img src="https://img.icons8.com/color/48/wordpress.png"
+            alt="WordPress">
 
           WordPress
 
@@ -387,19 +386,23 @@
 
         <a href="https://analytics.google.com"
           class="skill-box"
-          onclick="window.open(this.href); return false;">
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <img src="https://img.icons8.com/color/48/google-analytics.png">
+          <img src="https://img.icons8.com/color/48/google-analytics.png"
+            alt="Analytics">
 
-          Google Analytics
+          Analytics
 
         </a>
 
         <a href="https://www.semrush.com"
           class="skill-box"
-          onclick="window.open(this.href); return false;">
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <img src="https://img.icons8.com/fluency/48/search.png">
+          <img src="https://img.icons8.com/fluency/48/search.png"
+            alt="SEMrush">
 
           SEMrush
 
@@ -407,9 +410,11 @@
 
         <a href="https://yoast.com/wordpress/plugins/seo/"
           class="skill-box"
-          onclick="window.open(this.href); return false;">
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <img src="https://img.icons8.com/color/48/seo.png">
+          <img src="https://img.icons8.com/color/48/seo.png"
+            alt="Yoast SEO">
 
           Yoast SEO
 
@@ -419,19 +424,21 @@
 
     </div>
 
-    <!-- TOOLS -->
+    <!-- Tools -->
 
     <div class="section">
 
-      <h2>Advertising Tools</h2>
+      <h2>Tools</h2>
 
       <div class="skills">
 
         <a href="https://ads.google.com"
           class="skill-box"
-          onclick="window.open(this.href); return false;">
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <img src="https://img.icons8.com/color/48/google-ads.png">
+          <img src="https://img.icons8.com/color/48/google-ads.png"
+            alt="Google Ads">
 
           Google Ads
 
@@ -439,9 +446,11 @@
 
         <a href="https://www.facebook.com/business/ads"
           class="skill-box"
-          onclick="window.open(this.href); return false;">
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <img src="https://img.icons8.com/color/48/meta.png">
+          <img src="https://img.icons8.com/color/48/meta.png"
+            alt="Meta Ads">
 
           Meta Ads
 
@@ -451,7 +460,7 @@
 
     </div>
 
-    <!-- MY WORK -->
+    <!-- My Work -->
 
     <div class="section">
 
@@ -461,21 +470,21 @@
 
       <div class="skills">
 
-        <a href="https://cbitss.in"
-          class="skill-box"
-          onclick="window.open(this.href); return false;">
+        <a href="#"
+          class="skill-box">
 
-          <img src="https://img.icons8.com/color/48/seo.png">
+          <img src="https://img.icons8.com/color/48/seo.png"
+            alt="Digital Marketing">
 
           Digital Marketing Course
 
         </a>
 
-        <a href="https://cbitss.in"
-          class="skill-box"
-          onclick="window.open(this.href); return false;">
+        <a href="#"
+          class="skill-box">
 
-          <img src="https://img.icons8.com/color/48/speech-bubble.png">
+          <img src="https://img.icons8.com/color/48/speech-bubble.png"
+            alt="English Speaking">
 
           English Speaking Course
 
@@ -487,21 +496,21 @@
 
       <div class="skills">
 
-        <a href="https://cbitss.in"
-          class="skill-box"
-          onclick="window.open(this.href); return false;">
+        <a href="#"
+          class="skill-box">
 
-          <img src="https://img.icons8.com/color/48/google-docs.png">
+          <img src="https://img.icons8.com/color/48/google-docs.png"
+            alt="Audit Report">
 
           Cbitss.in
 
         </a>
 
-        <a href="https://chandigarhcabexpress.com"
-          class="skill-box"
-          onclick="window.open(this.href); return false;">
+        <a href="#"
+          class="skill-box">
 
-          <img src="https://img.icons8.com/color/48/google-docs.png">
+          <img src="https://img.icons8.com/color/48/google-docs.png"
+            alt="Audit Report">
 
           chandigarhcabexpress.com
 
@@ -511,7 +520,7 @@
 
     </div>
 
-    <!-- CERTIFICATES -->
+    <!-- Certificates -->
 
     <div class="section">
 
@@ -522,7 +531,8 @@
         <a href="#"
           class="skill-box">
 
-          <img src="https://img.icons8.com/color/48/certificate.png">
+          <img src="https://img.icons8.com/color/48/certificate.png"
+            alt="Certificate">
 
           AutoCAD Certificate
 
@@ -532,7 +542,7 @@
 
     </div>
 
-    <!-- PERSONAL -->
+    <!-- Personal -->
 
     <div class="section">
 
@@ -543,7 +553,7 @@
 
     </div>
 
-    <!-- FOOTER -->
+    <!-- Footer -->
 
     <footer>
 
@@ -559,8 +569,10 @@
 
       const menu = document.getElementById("menuBox");
 
-      menu.classList.toggle("show");
-
+      menu.style.display =
+        menu.style.display === "block"
+          ? "none"
+          : "block";
     }
 
     window.addEventListener("click", function (e) {
@@ -568,8 +580,7 @@
       if (!e.target.closest('.menu-container')) {
 
         document.getElementById("menuBox")
-          .classList.remove("show");
-
+          .style.display = "none";
       }
 
     });
@@ -584,7 +595,6 @@
         document.body.classList.contains("dark")
           ? "☀️"
           : "🌙";
-
     };
 
   </script>
@@ -592,4 +602,3 @@
 </body>
 
 </html>
-```
