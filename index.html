@@ -8,20 +8,22 @@
   <script>
     !function (f, b, e, v, n, t, s) {
       if (f.fbq) return;
+
       n = f.fbq = function () {
         n.callMethod ?
-          n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          n.callMethod.apply(n, arguments) :
+          n.queue.push(arguments)
       };
 
       if (!f._fbq) f._fbq = n;
 
       n.push = n;
-      n.loaded = !0;
+      n.loaded = true;
       n.version = '2.0';
       n.queue = [];
 
       t = b.createElement(e);
-      t.async = !0;
+      t.async = true;
       t.src = v;
 
       s = b.getElementsByTagName(e)[0];
@@ -48,15 +50,14 @@
   <meta name="description"
     content="Parth Sharma Digital Marketing Portfolio - SEO, WordPress, Google Ads, Meta Ads">
 
-  <!-- SEO -->
   <meta property="og:title" content="Parth Sharma Portfolio">
   <meta property="og:description" content="Digital Marketing Portfolio">
   <meta property="og:type" content="website">
 
-  <!-- Favicon -->
   <link rel="icon" href="webs.jpeg">
 
   <style>
+
     :root {
       --bg: #f4f6f9;
       --card: #ffffff;
@@ -83,10 +84,6 @@
       background: var(--bg);
       color: var(--text);
       transition: 0.3s;
-    }
-
-    body.dark a {
-      color: #38bdf8;
     }
 
     .container {
@@ -118,15 +115,6 @@
       border-radius: 6px;
     }
 
-    .sub-heading {
-      margin-top: 15px;
-      margin-bottom: 8px;
-      font-size: 16px;
-      color: var(--primary);
-      border-left: 4px solid var(--primary);
-      padding-left: 8px;
-    }
-
     .skills {
       display: flex;
       flex-wrap: wrap;
@@ -144,6 +132,7 @@
       color: inherit;
       font-size: 13px;
       transition: 0.3s;
+      cursor: pointer;
     }
 
     .skill-box:hover {
@@ -231,19 +220,18 @@
     }
 
     @media(max-width:768px) {
+
       .container {
         margin: 70px 10px 20px;
         padding: 15px;
       }
 
-      .skills {
-        gap: 6px;
-      }
-
       .skill-box {
         font-size: 12px;
       }
+
     }
+
   </style>
 
 </head>
@@ -260,19 +248,33 @@
 
     <div class="menu-box" id="menuBox">
 
-      <a href="https://wa.me/919817077660" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.icons8.com/color/48/whatsapp.png" alt="WhatsApp">
+      <a href="https://wa.me/919817077660"
+        onclick="window.open(this.href); return false;">
+
+        <img src="https://img.icons8.com/color/48/whatsapp.png"
+          alt="WhatsApp">
+
         WhatsApp
+
       </a>
 
       <a href="mailto:parthsharma73353@gmail.com">
-        <img src="https://img.icons8.com/color/48/gmail.png" alt="Email">
+
+        <img src="https://img.icons8.com/color/48/gmail.png"
+          alt="Email">
+
         Email
+
       </a>
 
-      <a href="https://www.linkedin.com/in/parthsharma23" target="_blank" rel="noopener noreferrer">
-        <img src="https://img.icons8.com/color/48/linkedin.png" alt="LinkedIn">
+      <a href="https://www.linkedin.com/in/parthsharma23"
+        onclick="window.open(this.href); return false;">
+
+        <img src="https://img.icons8.com/color/48/linkedin.png"
+          alt="LinkedIn">
+
         LinkedIn
+
       </a>
 
     </div>
@@ -302,35 +304,13 @@
 
     <div class="section">
 
-      <h2>Education</h2>
-
-      <div style="text-align:center;">
-
-        <b>Digital Marketing Course</b><br>
-
-        <a href="https://cbitss.in" target="_blank">
-          CBitss Institute, Chandigarh
-        </a>
-
-        <br><br>
-
-        <img
-          src="https://rest.techbehemoths.com/storage/images/companies/27278/e26b20ed9ee6e3b8d5afe01fd733ede9.png"
-          style="width:130px; border-radius:12px;"
-          alt="CBitss">
-
-      </div>
-
-    </div>
-
-    <div class="section">
-
       <h2>Software Skills</h2>
 
       <div class="skills">
 
         <a href="https://www.autodesk.com/products/autocad"
-          class="skill-box" target="_blank">
+          class="skill-box"
+          onclick="window.open(this.href); return false;">
 
           <img src="https://img.icons8.com/color/48/autocad.png"
             alt="AutoCAD">
@@ -340,7 +320,8 @@
         </a>
 
         <a href="https://www.canva.com"
-          class="skill-box" target="_blank">
+          class="skill-box"
+          onclick="window.open(this.href); return false;">
 
           <img src="https://img.icons8.com/color/48/canva.png"
             alt="Canva">
@@ -350,7 +331,8 @@
         </a>
 
         <a href="https://wordpress.org"
-          class="skill-box" target="_blank">
+          class="skill-box"
+          onclick="window.open(this.href); return false;">
 
           <img src="https://img.icons8.com/color/48/wordpress.png"
             alt="WordPress">
@@ -360,7 +342,8 @@
         </a>
 
         <a href="https://analytics.google.com"
-          class="skill-box" target="_blank">
+          class="skill-box"
+          onclick="window.open(this.href); return false;">
 
           <img src="https://img.icons8.com/color/48/google-analytics.png"
             alt="Google Analytics">
@@ -370,7 +353,8 @@
         </a>
 
         <a href="https://www.semrush.com"
-          class="skill-box" target="_blank">
+          class="skill-box"
+          onclick="window.open(this.href); return false;">
 
           <img src="https://img.icons8.com/fluency/48/search.png"
             alt="SEMrush">
@@ -380,7 +364,8 @@
         </a>
 
         <a href="https://yoast.com/wordpress/plugins/seo/"
-          class="skill-box" target="_blank">
+          class="skill-box"
+          onclick="window.open(this.href); return false;">
 
           <img src="https://img.icons8.com/color/48/seo.png"
             alt="Yoast SEO">
@@ -400,7 +385,8 @@
       <div class="skills">
 
         <a href="https://ads.google.com"
-          class="skill-box" target="_blank">
+          class="skill-box"
+          onclick="window.open(this.href); return false;">
 
           <img src="https://img.icons8.com/color/48/google-ads.png"
             alt="Google Ads">
@@ -410,7 +396,8 @@
         </a>
 
         <a href="https://www.facebook.com/business/ads"
-          class="skill-box" target="_blank">
+          class="skill-box"
+          onclick="window.open(this.href); return false;">
 
           <img src="https://img.icons8.com/color/48/meta.png"
             alt="Meta Ads">
@@ -428,7 +415,6 @@
       <h2>Personal Details</h2>
 
       <p>Languages: Hindi, English</p>
-
       <p>Nationality: Indian</p>
 
     </div>
